@@ -4,19 +4,19 @@ export default class characterMath {
         this.distance = 1;
     }
 
-    setStoned(value) {
+    set setStoned(value) {
         this.stoned = value;
     }
 
-    getStoned() {
+    get getStoned() {
         return this.stoned;
     }
 
-    setAttack(power) {
+    set setAttack(power) {
         this.attack = power;
     }
 
-    getAttack() {
+    get getAttack() {
         const get_Attack = this.attack - (this.distance - 1) * (this.attack * 0.1); // attack - Math.log2(x) * 5
 
         if (this.stoned) {
