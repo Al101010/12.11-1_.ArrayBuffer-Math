@@ -5,29 +5,28 @@ test("Magician, this.stoned = false", () => {
     const ivan = new Magician();
     ivan.distance = 3;
 
-  expect(ivan.Attack).toBe(80);
+  expect(ivan.attack).toBe(80);
 });
 
 test('Daemon, this.stoned = true', () => {
     const oleg = new Daemon();
     oleg.distance = 4;
-    oleg.Stoned = true;
+    oleg.stoned = true;
 
-  expect(oleg.Attack).toBe(60);
+  expect(oleg.attack).toBe(60);
 });
 
 test('Magician, stonedGet() - false', () => {
     const olga = new Magician();
 
-  expect(olga.Stoned).toBe(false);
+  expect(olga.stoned).toBe(false);
 });
 
-// attackSet
 test('Daemon, attackGet() - 25', () => {
     const igor = new Daemon();
     igor.distance = 4;
-    igor.Attack = 50;
-    igor.Stoned = true;
+    igor.attack = 50;
+    igor.stoned = true;
 
-  expect(igor.Attack).toBe(25);
+  expect(igor.attack).toBe(25);
 });

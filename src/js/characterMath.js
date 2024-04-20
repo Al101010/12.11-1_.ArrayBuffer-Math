@@ -4,25 +4,25 @@ export default class characterMath {
         this.distance = 1;
     }
 
-    set Stoned(value) {
-        this.stoned = value;
+    set stoned(value) {
+        this._stoned = value;
     }
 
-    get Stoned() {
-        return this.stoned;
+    get stoned() {
+        return this._stoned;
     }
 
-    set Attack(power) {
-        this.attack = power;
+    set attack(power) {
+        this._attack = power;
     }
 
-    get Attack() {
-        const get_Attack = this.attack - (this.distance - 1) * (this.attack * 0.1); // attack - Math.log2(x) * 5
+    get attack() {
+        const getAttack = this._attack - (this.distance - 1) * (this._attack * 0.1); // attack - Math.log2(x) * 5
 
         if (this.stoned) {
-            return Math.round(get_Attack - Math.log2(this.distance) * 5);
+            return Math.round(getAttack - Math.log2(this.distance) * 5);
         }
 
-        return get_Attack;
+        return getAttack;
     }
 }
